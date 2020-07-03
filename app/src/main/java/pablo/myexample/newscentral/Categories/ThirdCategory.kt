@@ -1,14 +1,13 @@
-package pablo.myexample.newscentral
+package pablo.myexample.newscentral.Categories
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_first_category.*
+import pablo.myexample.newscentral.R
 
-class FirstCategory : Fragment() {
+class ThirdCategory : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

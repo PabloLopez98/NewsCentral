@@ -28,9 +28,15 @@ class CollectionFragment : Fragment() {
         collectionAdapter = Adapter(this)
         viewpager2 = view.findViewById(R.id.view_pager_2)
         viewpager2.adapter = collectionAdapter
-
-        button.setOnClickListener {
-            viewpager2.setCurrentItem(1, true)
-        }
+        val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
+        TabLayoutMediator(tabLayout, viewpager2){tab, position ->
+            when(position){
+                0 -> tab.text = "Sports"
+                1 -> tab.text = "Business"
+                2 -> tab.text = "Science"
+                3 -> tab.text = "Covid-19"
+                4 -> tab.text = "Entertainment"
+            }
+        }.attach()
     }
 }
